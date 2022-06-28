@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+}
+
+#light body {
+    background-color:  #FFF;
+}
+
+#dark body {
+    background-color: #000;
+}
+
+div {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;
+    margin: 0;
+}
+
+div:-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #8501A6;
+}
+
+a:active {
+    color: #000;
+    font-weight: 500;
+}
+
+#light a {
+    color: #000;
+}
+
+#light a:hover {
+    color: #8501A6;
+}
+
+#light a:active {
+    color: #000;
+    font-weight: 500;
+}
+
+#dark a {
+    color: #FFF;
+}
+
+#dark a:hover {
+    color: #C103D2;
+}
+
+#dark a:active {
+    color: #FFF;
+    font-weight: 500;
+}
+
+button {
+    color:  #000;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+button:hover {
+    color: #8501A6;
+}
+
+button:active {
+    color:  #000;
+    font-weight: 500;
+}
+
+#light button {
+    color: #000;
+}
+
+#light button:hover {
+    color: #8501A6;
+}
+
+#light button:active {
+    color: #000;
+    font-weight: 500;
+}
+
+#dark button {
+    color: #FFF;
+}
+
+#dark button:hover {
+    color: #C103D2;
+}
+
+#dark button:active {
+    color: #FFF;
+    font-weight: 500;
+}
+
+h1 #light {
+    color: #000;
+}
+
+h1 #dark {
+    color:  #FFF;
+}
+
+p #light {
+    color: #000;
+}
+
+p #dark {
+    color:  #FFF;
+}
