@@ -57,9 +57,9 @@ const LeftHalf = ({ matches, selected, setSelected }) => (
           <SpacerHXL />
         </div>
       </div>
-      {matches ? <SpacerVXL /> : null}
+      {matches ? <SpacerVXL /> : <div style={styles.smallBlock} />}
     </div>
-    {matches ? <div style={styles.block} /> : null}
+    {matches ? <div style={styles.block} /> : <div style={styles.smallBlockTop} />}
   </div>
 )
 
@@ -98,13 +98,12 @@ const styles = {
   rightContainer: {
     width: '67vw',
     position: 'relative',
-    marginLeft: 20,
+    marginRight: 20,
   },
   mobileContainer: {
     width: '100vw',
     position: 'relative',
     marginLeft: 20,
-    marginRight: 20,
   },
   leftHalf: {
     height: '100vh',
@@ -125,7 +124,6 @@ const styles = {
   },
   rightHalfContent: {
     width: '100%',
-    height: '100%',
   },
   header: {
     ...Text.text.title,
@@ -147,6 +145,25 @@ const styles = {
     margin: 0,
     minWidth: 60,
     maxWidth: 60,
+    height: '100vh',
+    backgroundColor: '#FFF',
+  },
+  smallBlock: {
+    zIndex: 999,
+    margin: 0,
+    minWidth: 20,
+    maxWidth: 20,
+    height: '100vh',
+    backgroundColor: '#FFF',
+  },
+  smallBlockTop: {
+    zIndex: 999,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    margin: 0,
+    minWidth: 20,
+    maxWidth: 20,
     height: '100vh',
     backgroundColor: '#FFF',
   },

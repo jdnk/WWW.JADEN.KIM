@@ -32,7 +32,6 @@ const styles = {
   container: {
     margin: 0,
     width: '100%',
-    height: '100%',
   },
   header: {
     ...Text.text.largeTitle,
