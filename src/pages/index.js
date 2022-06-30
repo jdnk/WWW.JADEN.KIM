@@ -75,7 +75,7 @@ const RightHalf = ({ item, selected }) => (
       }
       {(selected === null) ? null : <SpacerVXL />}
     </div>
-    <div style={styles.block} />
+    {(selected === null) ? null : <div style={styles.block} />}
   </div>
 )
 
