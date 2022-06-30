@@ -1,5 +1,5 @@
 import '../styles/global.css'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Text } from '../styles'
 import { useMediaQuery } from '../hooks'
 import Bio from '../components/Bio'
@@ -36,33 +36,35 @@ const IndexPage = () => {
 }
 
 const LeftHalf = ({ matches, selected, setSelected }) => (
-  <div style={matches ? styles.leftHalf : styles.leftHalfMobile}>
-    <div>
-      <SpacerHXXL />
-      <Bio title={'About'} body={aboutText} />
+  <div style={matches ? styles.leftContainer : styles.mobileContainer}>
+    <div style={matches ? styles.leftHalf : styles.leftHalfMobile}>
       <div>
-        <h1 style={styles.header}>
-          Work
-        </h1>
-        <SpacerHSm />
-        {matches
-          ? <VListBtn
-              items={data}
-              selected={selected}
-              setSelected={setSelected}
-            />
-          : <VList items={data} />
-        }
-        <SpacerHXL />
+        <SpacerHXXL />
+        <Bio title={'About'} body={aboutText} />
+        <div>
+          <h1 style={styles.header}>
+            Work
+          </h1>
+          <SpacerHSm />
+          {matches
+            ? <VListBtn
+                items={data}
+                selected={selected}
+                setSelected={setSelected}
+              />
+            : <VList items={data} />
+          }
+          <SpacerHXL />
+        </div>
       </div>
+      {matches ? <SpacerVXL /> : null}
     </div>
-    {matches ? <SpacerVXL /> : null}
+    {matches ? <div style={styles.block} /> : null}
   </div>
 )
 
-const RightHalf = ({ item, selected }) => {
-
-  return (
+const RightHalf = ({ item, selected }) => (
+  <div style={styles.rightContainer}>
     <div style={styles.rightHalf}>
       {(selected === null)
         ? <div style={styles.placeholderText}>Click my work.</div>
@@ -73,8 +75,9 @@ const RightHalf = ({ item, selected }) => {
       }
       {(selected === null) ? null : <SpacerVXL />}
     </div>
-  )
-}
+    <div style={styles.block} />
+  </div>
+)
 
 const aboutText = 'I am a 2022 Computer Science/Art graduate from Pomona College. I primarily focus on UI/UX design, but I am well-versed in website/application development, identity design, and graphic design. I love listening to and discovering new music (especially 70s soul, jazz, post-punk, and underground hip-hop) and making my own too (which you can find in the links below)! I love getting to know new people too, so feel free to reach out to me with matters unrelated to employment, as well!'
 
@@ -87,25 +90,34 @@ const styles = {
     width: '100vw',
     display: 'flex',
   },
-  leftHalf: {
-    marginLeft: 20,
+  leftContainer: {
     width: '33vw',
+    position: 'relative',
+    marginLeft: 20,
+  },
+  rightContainer: {
+    width: '67vw',
+    position: 'relative',
+    marginLeft: 20,
+  },
+  mobileContainer: {
+    width: '100vw',
+    position: 'relative',
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  leftHalf: {
     height: '100vh',
     maxHeight: '100vh',
     overflow: 'auto',
     display: 'flex',
   },
   leftHalfMobile: {
-    marginLeft: 20,
-    marginRight: 20,
-    width: '100vw',
     maxHeight: '100vh',
     overflow: 'auto',
     display: 'flex',
   },
   rightHalf: {
-    marginRight: 20,
-    width: '67vw',
     height: '100vh',
     maxHeight: '100vh',
     overflow: 'auto',
@@ -126,6 +138,17 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  block: {
+    zIndex: 999,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    margin: 0,
+    minWidth: 60,
+    maxWidth: 60,
+    height: '100vh',
+    backgroundColor: '#FFF',
   },
 }
 

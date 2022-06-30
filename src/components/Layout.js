@@ -21,7 +21,6 @@ const Layout = ({ children, setSelected }) => (
 
 const styles = {
   container: {
-    zIndex: 999,
   },
 }
 

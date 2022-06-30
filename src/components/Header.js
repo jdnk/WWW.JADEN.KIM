@@ -59,7 +59,6 @@ const styles = {
     margin: 0,
   },
   switch: {
-    zIndex: -1,
     margin: 0,
   },
 }
