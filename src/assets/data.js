@@ -2,7 +2,6 @@ const data = [
   {
     id: 'gh',
     title: 'Github',
-    link: 'https://github.com/jdnk',
     content: [
       {
         type: 'text',
@@ -17,7 +16,6 @@ const data = [
   {
     id: 'li',
     title: 'LinkedIn',
-    link: 'https://linkedin.com/in/jdnk',
     content: [
       {
         type: 'text',
@@ -60,7 +58,6 @@ const data = [
   {
     id: 'mu',
     title: 'Music',
-    link: 'https://songwhip.com/isaiahmoss/wind-up-fantasy',
     content: [
       {
         type: 'text',
@@ -75,7 +72,6 @@ const data = [
   {
     id: 'ig',
     title: 'Instagram',
-    link: 'https://instagram.com/isaiahhaswifi',
     content: [
       {
         type: 'text',

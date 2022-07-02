@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import { Text } from '../styles'
 import { useTheme } from '../contexts/ThemeContext'
 
@@ -8,9 +9,9 @@ const VList = ({ items }) => {
   return (
     <div style={styles.container}>
       {items.map((item, ind) =>
-        <a id={theme} href={item.link} style={styles.text}>
+        <Link id={theme} to={item.id} style={styles.text}>
           {item.title}
-        </a>)
+        </Link>)
       }
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactSwitch  from 'react-switch'
+import { Link } from 'react-router-dom'
 import { Text } from '../styles'
 import { useMediaQuery } from '../hooks'
 import { SpacerHMd, SpacerHLg } from './spacers'
@@ -19,12 +20,12 @@ const Header = ({ setSelected }) => {
           ? <button onClick={() => setSelected(null)} id={theme} style={styles.text}>
               Jaden Kim
             </button>
-          : <a id={theme} href={'/'} style={styles.text}>
+          : <Link id={theme} to={'/'} style={styles.text}>
               Jaden Kim
-            </a>
+            </Link>
         }
-        {/*<div style={styles.switch}>
-          <ReactSwitch
+        <div style={styles.switch}>
+       {/*   <ReactSwitch
             onChange={toggleTheme}
             checked={theme === 'dark'}
             offColor={'#000'}
@@ -37,8 +38,8 @@ const Header = ({ setSelected }) => {
             width={40}
             handleDiameter={18}
             borderRadius={20}
-          />
-        </div>*/}
+          />*/}
+        </div>
       </div>
     <SpacerHLg />
     </div>
