@@ -9,12 +9,12 @@ const Image = ({ image }) => {
   return (
     <div>
       {xl
-        ? <img src={image.default} alt={'Image not found.'} style={styles.imageXL} />
+        ? <img src={image} alt={'It ain\'t here.'} style={styles.imageXL} />
         : (lg
-        ? <img src={image.default} alt={'Image not found.'} style={styles.imageLg} />
+        ? <img src={image} alt={'It ain\'t here.'} style={styles.imageLg} />
         : (md
-        ? <img src={image.default} alt={'Image not found.'} style={styles.imageMd} />
-        : <img src={image.default} alt={'Image not found.'} style={styles.image} />
+        ? <img src={image} alt={'It ain\'t here.'} style={styles.imageMd} />
+        : <img src={image} alt={'It ain\'t here.'} style={styles.image} />
         ))
       }
     </div>

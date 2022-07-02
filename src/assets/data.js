@@ -23,7 +23,7 @@ const data = [
       },
       {
         type: 'image',
-        content: require('./images/wf.jpg'),
+        content: './images/fantasy.jpg'
       },
       {
         type: 'text',

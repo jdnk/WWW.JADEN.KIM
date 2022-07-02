@@ -25,6 +25,7 @@ const styles = {
     display: 'flex',
     backgroundColor: Colors.colors.light.banner,
     justifyContent: 'center',
+    alignItems: 'center'
   },
   text: {
     ...Text.text.item,
