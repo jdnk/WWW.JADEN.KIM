@@ -62,6 +62,7 @@ export const text = {
     ...sizes.sm,
     ...weights.bold,
     ...fonts.sans,
+    textTransform: 'uppercase',
   },
   item: {
     ...sizes.sm,

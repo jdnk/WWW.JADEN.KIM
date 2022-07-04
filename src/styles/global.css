@@ -3,7 +3,7 @@ body {
 }
 
 #light body {
-    background-color:  #FFF;
+    background-color: #FFF;
 }
 
 #dark body {
@@ -70,6 +70,7 @@ button {
     margin: 0;
     padding: 0;
     text-align: left;
+    cursor: pointer;
 }
 
 button:hover {
@@ -112,7 +113,7 @@ h1 #light {
 }
 
 h1 #dark {
-    color:  #FFF;
+    color: #FFF;
 }
 
 p #light {
@@ -120,5 +121,5 @@ p #light {
 }
 
 p #dark {
-    color:  #FFF;
+    color: #FFF;
 }

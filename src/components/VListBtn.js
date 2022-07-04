@@ -39,7 +39,6 @@ const styles = {
   textSelected: {
     ...Text.text.bold,
     margin: 0,
-    color: '#CCC'
   },
 }
 
