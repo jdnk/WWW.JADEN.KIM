@@ -1,14 +1,13 @@
 import '../styles/global.css'
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import { SpacerHXXL } from '../components/spacers'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
-import data from '../assets/data'
 
-const ProjectPage = () => {
+const ProjectPage = ({ projects }) => {
   const { project } = useParams()
-  const selectedItem = data.find(item => item.id === project)
+  const selectedItem = projects.find(item => item.id === project)
 
   return (
     <Layout>

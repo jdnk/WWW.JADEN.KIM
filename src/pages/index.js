@@ -8,23 +8,24 @@ import VList from '../components/VList'
 import VListBtn from '../components/VListBtn'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
-import data from '../assets/data'
 
-const IndexPage = () => {
+const IndexPage = ({ loading, projects }) => {
   const matches = useMediaQuery('md')
   const [selected, setSelected] = useState(null)
-  const selectedItem = data.find(item => item.id === selected)
+  const selectedItem = projects.find(item => item.id === selected)
 
   return (
     <Layout setSelected={setSelected}>
       <div style={styles.body}>
         <LeftHalf
+        projects={projects}
           matches={matches}
           selected={selected}
           setSelected={setSelected}
         />
         {matches
           ? <RightHalf
+              loading={loading}
               item={selectedItem}
               selected={selected}
             />
@@ -35,7 +36,7 @@ const IndexPage = () => {
   )
 }
 
-const LeftHalf = ({ matches, selected, setSelected }) => (
+const LeftHalf = ({ projects, matches, selected, setSelected }) => (
   <div style={matches ? styles.leftContainer : styles.mobileContainer}>
     <div style={matches ? styles.leftHalf : styles.leftHalfMobile}>
       <div>
@@ -48,11 +49,11 @@ const LeftHalf = ({ matches, selected, setSelected }) => (
           <SpacerHSm />
           {matches
             ? <VListBtn
-                items={data}
+                items={projects}
                 selected={selected}
                 setSelected={setSelected}
               />
-            : <VList items={data} />
+            : <VList items={projects} />
           }
           <SpacerHXL />
         </div>
@@ -63,15 +64,18 @@ const LeftHalf = ({ matches, selected, setSelected }) => (
   </div>
 )
 
-const RightHalf = ({ item, selected }) => (
+const RightHalf = ({ loading, item, selected }) => (
   <div style={styles.rightContainer}>
     <div style={styles.rightHalf}>
-      {(selected === null)
+      {loading
+        ? <div style={styles.placeholderText}>Loading...</div>
+        : ((selected === null)
         ? <div style={styles.placeholderText}>Click my work.</div>
         : <div style={styles.rightHalfContent}>
             <SpacerHXXL />
             <Content title={item.title} content={item.content} />
           </div>
+        )
       }
       {(selected === null) ? null : <SpacerVXL />}
     </div>
