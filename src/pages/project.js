@@ -36,7 +36,7 @@ const styles = {
     zIndex: -1,
     position: 'absolute',
     top: 0,
-    height: '100vh',
+    height: '100%',
     width: '100vw',
     display: 'flex',
   },
@@ -46,7 +46,7 @@ const styles = {
     marginLeft: 20,
   },
   mobileContent: {
-    maxHeight: '100vh',
+    maxHeight: '100%',
     overflow: 'auto',
     display: 'flex',
   },
@@ -55,7 +55,7 @@ const styles = {
     margin: 0,
     minWidth: 20,
     maxWidth: 20,
-    height: '100vh',
+    height: '100%',
     backgroundColor: '#FFF',
   },
   smallBlockTop: {
@@ -66,7 +66,7 @@ const styles = {
     margin: 0,
     minWidth: 20,
     maxWidth: 20,
-    height: '100vh',
+    height: '100%',
     backgroundColor: '#FFF',
   },
 }
